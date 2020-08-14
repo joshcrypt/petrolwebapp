@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>Petrol App</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <hr>     
+            <a href="index.html" style="color: inherit;"><ion-icon name="home" size="large" ></ion-icon></a>
+            <a href="createpetroldetails.html" style="color: inherit;"><ion-icon size="large" name="create-outline"></ion-icon></a>
+            <a href="viewpetroldetails.html" style="color: inherit;"><ion-icon size="large" name="eye"></ion-icon></a>
+            <hr>
+            <h1>Create New Entry</h1>
+            <hr>
+            <div class="card text-center text-white bg-dark border-dark mb-3">
+                <form class="needs-validation" novalidate>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-form-label">Mileage</label>
+                        <input type="text" class="form-control" id="Mileage" name="Mileage" placeholder="Mileage" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter the Mileage
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-form-label">PpL</label>
+                        <input type="text" class="form-control" id="PpL" name="PpL" placeholder="Price" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter the price.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-form-label">Amount</label>
+                        <input type="text" class="form-control" id="Amount" name="Amount" placeholder="Amount" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter the amount
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-form-label">Capacity</label>
+                        <input type="text" class="form-control" id="Capacity" name="Capacity" placeholder="Capacity" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter the capacity.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-form-label">Petrol Station</label>
+                        <input type="text" class="form-control" id="PetrolStation" name="PetrolStation" placeholder="Petrol Station" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter the Petrol Station
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-form-label">License Plate</label>
+                        <input type="text" class="form-control" id="LicensePlate" name="LicensePlate" placeholder="KAL570Q" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter the License Plate Number
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-form-label">Additional Info</label>
+                        <input type="text" class="form-control" id="AdditionalInfo" id="AdditionalInfo" placeholder="Additional Info" >
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please enter any Additional Info
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <button type="submit" class="btn btn-primary" onclick="FormProcess()">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <footer>&copy; Copyright 2020 Petrol App API</footer>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+</html>

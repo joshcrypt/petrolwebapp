@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>View Petrol Details</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <hr>
+            <a href="index.html" style="color: inherit;"><ion-icon name="home" size="large" ></ion-icon></a>
+            <a href="createpetroldetails.html" style="color: inherit;"><ion-icon size="large" name="create"></ion-icon></a>
+            <a href="viewpetroldetails.html" style="color: inherit;"><ion-icon size="large" name="eye-outline"></ion-icon></a>
+            <hr>
+            <h1>Petrol Consumption</h1>
+            <hr>
+            <div>
+                <div class="row" id="petroldetails">
+                </div>
+            </div>
+        <div id="editpetroldetailsModal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Edit Petrol Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="editpetroldetailsform">
+                            <div class="form-group">
+                                <label for="Id">Id</label>
+                                <input class="form-control" name="Id" id="Id">
+                            </div>
+                            <div class="form-group">
+                                <label for="Mileage">Mileage</label>
+                                <input class="form-control" name="Mileage" id="Mileage">
+                            </div>
+                            <div class="form-group">
+                                <label for="Date">Date</label>
+                                <input class="form-control" name="Date" id="Date">
+                            </div>
+                            <div class="form-group">
+                                <label for="PpL">PpL</label>
+                                <input class="form-control" name="PpL" id="PpL">
+                            </div>
+                            <div class="form-group">
+                                <label for="Amount">Amount</label>
+                                <input class="form-control" name="Amount" id="Amount">
+                            </div>
+                            <div class="form-group">
+                                <label for="Capacity">Capacity</label>
+                                <input class="form-control" name="Capacity" id="Capacity">
+                            </div>
+                            <div class="form-group">
+                                <label for="PetrolStation">Petrol Station</label>
+                                <input class="form-control" name="PetrolStation" id="PetrolStation">
+                            </div>
+                            <div class="form-group">
+                                <label for="LicensePlate">License Plate</label>
+                                <input class="form-control" name="LicensePlate" id="LicensePlate">
+                            </div>
+                            <div class="form-group">
+                                <label for="AdditionalInfo">Additional Info</label>
+                                <input class="form-control" name="AdditionalInfo" id="AdditionalInfo">
+                            </div>
+                            <button type="submit" class="btn btn-primary" onclick="PutPetrolDetails()">Submit</button>
+                        </form>
+                        <footer>&copy; Copyright 2020 Petrol App API</footer>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer>&copy; Copyright 2020 Petrol App API</footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+</html>
