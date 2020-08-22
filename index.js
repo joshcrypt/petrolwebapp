@@ -24,7 +24,8 @@ function FormProcess(){
   var PetrolStation = document.getElementById('PetrolStation').value;
   var LicensePlate = document.getElementById('LicensePlate').value;
   var AdditionalInfo = document.getElementById('AdditionalInfo').value;
-  let url = "https://rna7x0m395.execute-api.eu-west-2.amazonaws.com/production/petroldetails";
+  var petroldata =JSON.stringify({"Mileage":Mileage,"PpL":PpL,"Amount":Amount,"Capacity":Capacity,"PetrolStation":PetrolStation,"LicensePlate":LicensePlate,"AdditionalInfo":AdditionalInfo});
+  let url = "http://localhost:5000/petroldetails";
   //Creating XHR object
   var xhr = new XMLHttpRequest();
   if (!('withCredentials' in xhr)) {
@@ -37,14 +38,15 @@ function FormProcess(){
   };
 
   xhr.setRequestHeader('Content-Type','application/json');
-  // Create a state change callback 
-  xhr.onreadystatechange = function () { 
-    if (xhr.readyState === 4 && xhr.status === 200) { 
-        // Print received data from server 
-        result.innerHTML = this.responseText; 
-    } 
-  }; 
-  var petroldata =JSON.stringify({"Mileage":Mileage,"PpL":PpL,"Amount":Amount,"Capacity":Capacity,"PetrolStation":PetrolStation,"LicensePlate":LicensePlate,"AdditionalInfo":AdditionalInfo});
+  xhr.onload = function(){
+    var data = JSON.parse(xhr.responseText);
+    if(data.stat == 'ok'){
+      console.log(data.message);
+    }
+    else{
+      alert(data.message);
+    }
+  }
   xhr.send(petroldata);
   location.reload();
 }
