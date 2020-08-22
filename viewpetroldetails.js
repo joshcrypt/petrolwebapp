@@ -1,10 +1,11 @@
+const URL = process.env.URL;
 //Delete petrol details
 function deletePetrolDetails(Id){
     var delpetroldetail = confirm("Are you sure you want to delete?");
     if(delpetroldetail == true){
       const xhr = new XMLHttpRequest();
-      let url = `https://rna7x0m395.execute-api.eu-west-2.amazonaws.com/production/petroldetails/${Id}`
-      xhr.open("DELETE",url, false);
+      let URL = URL + `/${Id}`
+      xhr.open("DELETE",URL, false);
       xhr.send();
       location.reload();
     } else{
@@ -14,8 +15,8 @@ function deletePetrolDetails(Id){
 //Update petrol details
 function setEditModal(Id){
     const xhr = new XMLHttpRequest();
-    let url = `https://rna7x0m395.execute-api.eu-west-2.amazonaws.com/production/petroldetails/${Id}`
-    xhr.open("GET",url, false);
+    let URL = URL + `/${Id}`
+    xhr.open("GET",URL, false);
     xhr.send();
     const petroldetail = JSON.parse(xhr.responseText);
 
@@ -38,7 +39,7 @@ function setEditModal(Id){
     document.getElementById('LicensePlate').value = LicensePlate; 
     document.getElementById('AdditionalInfo').value = AdditionalInfo;
     //Set the action on the form
-    //document.getElementById('editpetroldetailsform').action = url;
+    //document.getElementById('editpetroldetailsform').action = URL;
 }
 
 //Put Petrol Details after update
@@ -54,8 +55,8 @@ function PutPetrolDetails(){
     var LicensePlate = document.getElementById('LicensePlate').value; 
     var AdditionalInfo = document.getElementById('AdditionalInfo').value;
     let xhr = new XMLHttpRequest();
-    let url = `https://rna7x0m395.execute-api.eu-west-2.amazonaws.com/production/petroldetails/${Id}`;
-    xhr.open("PUT",url,true);
+    let URL = URL + `/${Id}`;
+    xhr.open("PUT",URL,true);
     xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
     xhr.onreadystatechange = function () { 
       if (xhr.readyState === 4 && xhr.status === 200) { 
@@ -72,8 +73,8 @@ function PutPetrolDetails(){
     //Load Petrol details in view page
     function LoadPetrolDetails(){
     const xhr = new XMLHttpRequest();
-    let url = "https://rna7x0m395.execute-api.eu-west-2.amazonaws.com/production/petroldetails";
-    xhr.open("GET",url,false);
+    let URL = "URL";
+    xhr.open("GET",URL,false);
     xhr.send();
     const petroldetails = JSON.parse(xhr.responseText);
     for(let petroldetail of petroldetails){

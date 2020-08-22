@@ -1,3 +1,4 @@
+const URL = process.env.URL;
 (function() {
   'use strict';
   window.addEventListener('load', function() {
@@ -26,8 +27,7 @@ function FormProcess(){
   var AdditionalInfo = document.getElementById('AdditionalInfo').value;
   //Creating XHR object
   let xhr = new XMLHttpRequest();
-  let url = "https://rna7x0m395.execute-api.eu-west-2.amazonaws.com/production/petroldetails";
-  xhr.open("POST",url,true);
+  xhr.open("POST",URL,true);
   xhr.setRequestHeader('Content-Type','application/json');
   // Create a state change callback 
   xhr.onreadystatechange = function () { 
