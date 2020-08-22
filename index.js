@@ -24,10 +24,18 @@ function FormProcess(){
   var PetrolStation = document.getElementById('PetrolStation').value;
   var LicensePlate = document.getElementById('LicensePlate').value;
   var AdditionalInfo = document.getElementById('AdditionalInfo').value;
-  //Creating XHR object
-  let xhr = new XMLHttpRequest();
   let url = "https://rna7x0m395.execute-api.eu-west-2.amazonaws.com/production/petroldetails";
-  xhr.open("POST",url,true);
+  //Creating XHR object
+  var xhr = new XMLHttpRequest();
+  if (!('withCredentials' in xhr)) {
+    alert('Browser does not support CORS.');
+    return;
+  }
+  xhr.open("POST",url);
+  xhr.onerror = function() {
+    alert('There was an error.');
+  };
+
   xhr.setRequestHeader('Content-Type','application/json');
   // Create a state change callback 
   xhr.onreadystatechange = function () { 
